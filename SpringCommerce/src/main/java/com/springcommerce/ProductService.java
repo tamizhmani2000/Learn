@@ -1,3 +1,4 @@
+/*services to retrieve product data*/
 package com.springcommerce;
 
 import java.util.HashMap;
