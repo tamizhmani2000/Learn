@@ -1,4 +1,5 @@
-target/
+target/*
+!target/SpringCommerce-0.0.1-SNAPSHOT.war
 !.mvn/wrapper/maven-wrapper.jar
 
 ### STS ###
