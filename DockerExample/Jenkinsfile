@@ -8,7 +8,7 @@ node {
    stage('Build') {
 
 
-         sh "'./DockerExample/gradlew' clean build"
+         sh "'./DockerExample/gradlew' build"
   
    }
    stage('Results') {
