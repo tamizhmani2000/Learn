@@ -1,5 +1,7 @@
 package com.mydocker;
 
+import static org.junit.Assert.*;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -11,6 +13,7 @@ public class DockerExampleApplicationTests {
 
 	@Test
 	public void contextLoads() {
+		assertTrue(true);
 	}
 
 }

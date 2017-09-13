@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+    mydocker:
+      container_name: mydocker
+      build: 
+        context: ./src/main/docker
+        dockerfile: "Dockerfile" 
+      ports:
+       - '80:8080'
