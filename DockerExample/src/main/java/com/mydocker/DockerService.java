@@ -20,7 +20,8 @@ class DockerService{
 	
 	@RequestMapping(value="/",method=RequestMethod.GET)
 	public String getMyDetails() {
-		return "Hello Docker World2";
+		return "Hello Docker World2.1";
+		
 	}
 	
 	@RequestMapping(value="/info",method=RequestMethod.GET)
