@@ -2,7 +2,12 @@
 package com.springcommerce;
 
 import java.util.HashMap;
+import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
+import org.springframework.stereotype.Service;
+import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,20 +15,21 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
-@RequestMapping(value="/rest/product")
+@Service
 class ProductService{
-	
-	@RequestMapping(value="/",method=RequestMethod.GET)
+
+	 
+
 	public HashMap<String,Product>getAllProducts() {
 		return SpringCommerceApplication.productList;
 	}
-	@RequestMapping(value="/view",method=RequestMethod.GET)
+	
+	
 	public Product viewProduct(@RequestParam(value="pid")String pid) {
 		return SpringCommerceApplication.productList.get(pid);
 	}
 	
-	@RequestMapping(value="/add",method=RequestMethod.POST)
+	
 	public Product addProduct(@RequestParam(value="pid")String pid,@RequestParam(value="name")String name) {
 		
 		Product dynamic= new Product(pid,name);
@@ -32,7 +38,7 @@ class ProductService{
 		return SpringCommerceApplication.productList.get(pid); 
 	}
 	
-	@RequestMapping(value="/update",method=RequestMethod.PUT)
+
 	public Product updateProduct(@RequestBody Product product) throws Exception{
 		
 		if (SpringCommerceApplication.productList.containsKey(product.getProductId())) {
@@ -44,7 +50,7 @@ class ProductService{
 		return product;
 	}
 	
-	@RequestMapping(value="/delete/{id}",method=RequestMethod.DELETE)
+
 	public Product deleteProduct(@PathVariable String id) throws Exception{
 		
 		Product product;

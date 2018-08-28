@@ -4,21 +4,15 @@ import java.util.HashMap;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.web.support.SpringBootServletInitializer;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
+@EnableDiscoveryClient
 @SpringBootApplication
-public class SpringCommerceApplication extends SpringBootServletInitializer {
+public class SpringCommerceApplication {
 
 	public static HashMap<String,Product> productList;
 	
-	@Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-		
-		initializeProducts();
-        return application.sources(SpringCommerceApplication.class);
-        
-    }
+
 	
 	public static void main(String[] args) {
 		

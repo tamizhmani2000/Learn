@@ -1,0 +1,18 @@
+var http = require ("http");
+http.createServer(function (req , res) {
+
+callDocker(req,res);
+res.writeHead(200,{'Content-Type':'text/html'});
+res.write("Hello World");
+res.end();
+
+}
+
+
+
+
+).listen(7777);
+
+function callDocker(req,res) {
+console.log('call to docker');
+}
