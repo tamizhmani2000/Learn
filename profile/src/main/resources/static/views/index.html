@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+   <head>
+   	  <meta charset="utf-8" /> <meta http-equiv="Access-Control-Allow-Origin" content="*"/> 	
+      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+      <script src="/js/app/app.js"></script>
+      <script src="/js/app/skillservice.js"></script>
+   </head>
+   
+   <body>
+      <!-- 
+      <div ng-app = "myapp" ng-controller = "HelloController" >
+         <h2>Welcome {{helloTo.title}} to the world of Tutorialspoint!</h2>
+      </div>  -->
+     <div ng-app="skillservice" ng-controller="ctrl">
+     
+     <table>
+  
+</table>
+     	<button id="submit_btn" class="btn btn-primary" ng-click="getData()">Get User</button>
+     	<div ng-show="skill != null">
+     		Name: {{skill}}
+     		
+     	</div>
+      </div>
+   </body>
+</html>
